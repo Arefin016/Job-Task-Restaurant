@@ -5,8 +5,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative bg-red-800 shadow dark:bg-gray-800">
-      <div className="container px-6 py-3 mx-auto md:flex">
+    <nav className="relative bg-red-800  dark:bg-gray-800 pt-8">
+      <div className="max-w-[1320px]  mx-auto md:flex">
         <div className="flex items-center justify-between">
           <a href="#" className="flex justify-center items-center gap-2">
             <img className="w-[36px] h-[37px] sm:h-7" src="logo.png" alt="Logo" />
