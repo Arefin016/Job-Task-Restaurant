@@ -22,7 +22,7 @@ const Carosel = () => {
     }, []);
   
     useEffect(() => {
-      // Check if boxRef.current is defined on mount
+     
       if (!boxRef.current) {
         console.error("Container element is not available. Check your component structure.");
       }
