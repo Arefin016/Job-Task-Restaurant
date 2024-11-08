@@ -1,7 +1,7 @@
 
 
 const ProfileCard = ({title,dis,img}) => (
-  <div className="w-full max-w-[306px] max-h[300px] overflow-hidden bg-white  shadow-lg dark:bg-gray-800 px-4 py-12">
+  <div className="w-[306px] max-h[300px] overflow-hidden bg-white  shadow-lg dark:bg-gray-800 px-4 py-12">
     <img
       className="object-cover max-w-[186px] mx-auto max-h-[86px] pt-4"
       src={img}

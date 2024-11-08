@@ -1,5 +1,6 @@
 import About from "../About/About"
 import Banner from "../Banner/Banner"
+import BookTable from "../BookTable/BookTable"
 import Carosel from "../Carosel/Carosel"
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <About></About>
       <Carosel></Carosel>
+      <BookTable />
     </div>
   )
 }
