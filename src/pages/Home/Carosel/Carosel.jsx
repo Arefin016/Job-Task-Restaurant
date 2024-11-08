@@ -1,22 +1,32 @@
+import  { useRef, useCallback, useEffect } from "react";
 import ProfileCard from "./ProfileCard";
 
 
 const Carosel = () => {
-    let box = document.querySelector('.container');
-    const prev = () => {
-        if (box) {
-            let width = box.clientWidth;
-            box.scrollLeft = box.scrollLeft - 306;
-            console.log(width);
-        }
-    };
-    const next = () => {
-        if (box) {
-            let width = box.clientWidth;
-            box.scrollLeft = box.scrollLeft + 306;
-            console.log(width);
-        }
-    };
+    const boxRef = useRef(null);
+
+    const prev = useCallback(() => {
+      if (boxRef.current) {
+        const width = boxRef.current.clientWidth;
+        boxRef.current.scrollLeft -= 338;
+        console.log("Scrolled to the left:", width);
+      }
+    }, []);
+  
+    const next = useCallback(() => {
+      if (boxRef.current) {
+        const width = boxRef.current.clientWidth;
+        boxRef.current.scrollLeft += 338;
+        console.log("Scrolled to the right:", width);
+      }
+    }, []);
+  
+    useEffect(() => {
+      // Check if boxRef.current is defined on mount
+      if (!boxRef.current) {
+        console.error("Container element is not available. Check your component structure.");
+      }
+    }, []);
     return (
         <div className="bg-[#FBF7F2] mt-20 py-28 px-10 relative">
             
@@ -35,7 +45,7 @@ const Carosel = () => {
                 </div>
                </div>
                 
-                 <div className="mt-16 flex flex-nowrap  gap-0 md:gap-8 overflow-x-hidden max-w-[1320px] mx-auto container">
+                 <div ref={boxRef} className="mt-16 flex flex-nowrap  gap-8 overflow-x-hidden max-w-[1320px] mx-auto container">
                     <div className="w-[306px]"><ProfileCard title='vegetables burger' dis='Barbecue Italian cuisine burger' img='ber.jpeg'></ProfileCard></div>
                     <div><ProfileCard title='Spacial Pizza ' dis='Barbecue Italian cuisine pizza' img='pizza.png'></ProfileCard></div>
                     
