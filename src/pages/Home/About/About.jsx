@@ -28,8 +28,8 @@ const About = () => {
 
     }
     return (
-        <div className="mt-44">
-          <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row p-8 gap-12">
+        <div className="mt-44 relative">
+          <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row p-8 md:p-0 gap-12">
           <div className=" w-full md:w-[50%]">
             <img src="about .png" alt="" className="w-[600px]" />
           </div>
@@ -59,8 +59,37 @@ const About = () => {
 
 
           </div>
+        
           </div>
+          <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12">
+
+            <div className="flex items-center mt-8 md:mt-0">
+                <div><img src="a.png"  className="max-w-[90px]" alt="" /></div>
+                <div>
+                    <h1 className="text-[30px] text-[#0A1425] uppercase  font-bold">fast delivery</h1>
+                    <p className="text-[20px] text-[#0A1425]">Within 30 minutes</p>
+                </div>
+            </div>
+            <div className="flex items-center mt-8 md:mt-0">
+                <div><img src="b.png"  className="max-w-[90px]" alt="" /></div>
+                <div>
+                    <h1 className="text-[30px] text-[#0A1425] uppercase  font-bold">absolute dining</h1>
+                    <p className="text-[20px] text-[#0A1425]">Best buffet restaurant</p>
+                </div>
+            </div>
+            <div className="flex items-center mt-8 md:mt-0">
+                <div><img src="c.png"  className="max-w-[90px]" alt="" /></div>
+                <div>
+                    <h1 className="text-[30px] text-[#0A1425] uppercase  font-bold">pickup delivery</h1>
+                    <p className="text-[20px] text-[#0A1425]">Grab your food order</p>
+                </div>
+            </div>
             
+          </div>
+          
+            <div className="absolute right-0 bottom-12 hidden md:flex">
+                <img src="fol.png" alt="" />
+            </div>
         </div>
     );
 };
